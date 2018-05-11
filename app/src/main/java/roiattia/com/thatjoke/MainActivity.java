@@ -1,11 +1,13 @@
 package roiattia.com.thatjoke;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import roiattia.com.jokelibrary.JokeActivity;
 import roiattia.com.joker.Joker;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, joker.getJoke(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, JokeActivity.class);
+                intent.putExtra("joke", joker.getJoke());
+                startActivity(intent);
+//                Toast.makeText(MainActivity.this, joker.getJoke(), Toast.LENGTH_SHORT).show();
             }
         });
     }
