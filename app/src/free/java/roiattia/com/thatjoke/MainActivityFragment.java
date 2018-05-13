@@ -55,7 +55,7 @@ public class MainActivityFragment extends MainFragment {
             public void onAdClosed() {
                 // Load the next interstitial.
                 mInterstitialAd.loadAd(new AdRequest.Builder().build());
-                openJokeActivity();
+                setAsyncTask();
             }
         });
     }
