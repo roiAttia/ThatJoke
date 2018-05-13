@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -19,14 +20,19 @@ import com.google.android.gms.ads.MobileAds;
 import roiattia.com.jokelibrary.JokeActivity;
 import roiattia.com.joker.Joker;
 
-public class MainActivityFragment extends MainFragment {
+public class MainActivityFragment extends MainFragment
+    implements EndpointsAsyncTask.EndpointCallback{
 
     private InterstitialAd mInterstitialAd;
+    private String mJoke;
+    private LinearLayout mLoadingLayout;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootview = inflater.inflate(R.layout.fragment_main, container, false);
+
+        mLoadingLayout = rootview.findViewById(R.id.layout_loading);
 
         initializeAd();
 
@@ -34,9 +40,7 @@ public class MainActivityFragment extends MainFragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                }
+                new EndpointsAsyncTask(MainActivityFragment.this).execute();
              }
         });
 
@@ -55,8 +59,22 @@ public class MainActivityFragment extends MainFragment {
             public void onAdClosed() {
                 // Load the next interstitial.
                 mInterstitialAd.loadAd(new AdRequest.Builder().build());
-                setAsyncTask();
+                startJokeActivity(mJoke);
             }
         });
+    }
+
+    @Override
+    public void preJoke() {
+        mLoadingLayout.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void postJoke(String joke) {
+        mJoke = joke;
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+            mLoadingLayout.setVisibility(View.INVISIBLE);
+        }
     }
 }

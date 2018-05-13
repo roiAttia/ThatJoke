@@ -1,10 +1,7 @@
 package roiattia.com.thatjoke;
 
-import android.content.Context;
 import android.os.AsyncTask;
-import android.support.v4.util.Pair;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -24,7 +21,13 @@ public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
     }
 
     public interface EndpointCallback{
-        void getJoke(String joke);
+        void preJoke();
+        void postJoke(String joke);
+    }
+
+    @Override
+    protected void onPreExecute() {
+        mEndpointCallback.preJoke();
     }
 
     @Override
@@ -57,7 +60,7 @@ public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         if(mEndpointCallback != null){
-            mEndpointCallback.getJoke(result);
+            mEndpointCallback.postJoke(result);
         }
     }
 }
