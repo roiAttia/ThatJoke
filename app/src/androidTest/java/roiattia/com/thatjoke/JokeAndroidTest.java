@@ -7,6 +7,7 @@ public class JokeAndroidTest extends AndroidTestCase{
 
     public void testVerifyAsyncTask(){
         EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask(null);
+        endpointsAsyncTask.execute();
         String result = null;
         try {
             result = endpointsAsyncTask.get();
