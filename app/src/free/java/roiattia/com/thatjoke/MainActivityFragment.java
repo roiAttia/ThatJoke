@@ -20,33 +20,17 @@ import com.google.android.gms.ads.MobileAds;
 import roiattia.com.jokelibrary.JokeActivity;
 import roiattia.com.joker.Joker;
 
-public class MainActivityFragment extends MainFragment
-    implements EndpointsAsyncTask.EndpointCallback{
+public class MainActivityFragment extends MainFragment{
 
     private InterstitialAd mInterstitialAd;
     private String mJoke;
-    private LinearLayout mLoadingLayout;
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootview = inflater.inflate(R.layout.fragment_main, container, false);
-
-        mLoadingLayout = rootview.findViewById(R.id.layout_loading);
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         initializeAd();
-
-        Button button = rootview.findViewById(R.id.btn_joke);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new EndpointsAsyncTask(MainActivityFragment.this).execute();
-             }
-        });
-
-        return rootview;
     }
-
 
     private void initializeAd() {
         MobileAds.initialize(getContext(), "ca-app-pub-3940256099942544~3347511713");
@@ -65,16 +49,11 @@ public class MainActivityFragment extends MainFragment
     }
 
     @Override
-    public void preJoke() {
-        mLoadingLayout.setVisibility(View.VISIBLE);
-    }
-
-    @Override
     public void postJoke(String joke) {
         mJoke = joke;
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
-            mLoadingLayout.setVisibility(View.INVISIBLE);
+            hideLoading();
         }
     }
 }

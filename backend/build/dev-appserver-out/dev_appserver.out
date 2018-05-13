@@ -1,21 +1,21 @@
-May 13, 2018 6:19:39 PM java.util.prefs.WindowsPreferences <init>
+May 13, 2018 10:35:50 PM java.util.prefs.WindowsPreferences <init>
 WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
-May 13, 2018 6:19:39 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+May 13, 2018 10:35:51 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\roiat\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Users\roiat\Desktop\ThatJoke\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-2018-05-13 18:19:40.020:INFO::main: Logging initialized @334ms
-May 13, 2018 3:19:40 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+2018-05-13 22:35:51.144:INFO::main: Logging initialized @342ms
+May 13, 2018 7:35:51 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
 WARNING: Your working directory, (C:\Users\roiat\Desktop\ThatJoke\backend) is not equal to your 
 web application root (C:\Users\roiat\Desktop\ThatJoke\backend\build\exploded-backend)
 You will not be able to access files from your working directory on the production server.
 
-2018-05-13 18:19:40.323:INFO:oejs.Server:main: jetty-9.3.18.v20170406
-2018-05-13 18:19:42.462:INFO:oeja.AnnotationConfiguration:main: Scanning elapsed time=1759ms
-2018-05-13 18:19:42.687:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@2ad48653{/,file:///C:/Users/roiat/Desktop/ThatJoke/backend/build/exploded-backend/,AVAILABLE}{C:\Users\roiat\Desktop\ThatJoke\backend\build\exploded-backend}
-2018-05-13 18:19:42.700:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@4149c063{HTTP/1.1,[http/1.1]}{localhost:8080}
-2018-05-13 18:19:42.700:INFO:oejs.Server:main: Started @3014ms
-May 13, 2018 3:19:42 PM com.google.appengine.tools.development.AbstractModule startup
+2018-05-13 22:35:51.438:INFO:oejs.Server:main: jetty-9.3.18.v20170406
+2018-05-13 22:35:53.508:INFO:oeja.AnnotationConfiguration:main: Scanning elapsed time=1708ms
+2018-05-13 22:35:53.739:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@2ad48653{/,file:///C:/Users/roiat/Desktop/ThatJoke/backend/build/exploded-backend/,AVAILABLE}{C:\Users\roiat\Desktop\ThatJoke\backend\build\exploded-backend}
+2018-05-13 22:35:53.751:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@4149c063{HTTP/1.1,[http/1.1]}{localhost:8080}
+2018-05-13 22:35:53.752:INFO:oejs.Server:main: Started @2951ms
+May 13, 2018 7:35:53 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: Module instance default is running at http://localhost:8080/
-May 13, 2018 3:19:42 PM com.google.appengine.tools.development.AbstractModule startup
+May 13, 2018 7:35:53 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: The admin console is running at http://localhost:8080/_ah/admin
-May 13, 2018 6:19:42 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+May 13, 2018 10:35:53 PM com.google.appengine.tools.development.DevAppServerImpl doStart
 INFO: Dev App Server is now running
