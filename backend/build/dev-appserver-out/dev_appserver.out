@@ -1,29 +1,21 @@
-WARNING: An illegal reflective access operation has occurred
-WARNING: Illegal reflective access by com.google.appengine.tools.development.StreamHandlerFactory (file:/C:/Users/roiat/AppData/Local/Google/Cloud%20SDK/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/lib/impl/appengine-local-runtime.jar) to method java.net.URL.getURLStreamHandler(java.lang.String)
-WARNING: Please consider reporting this to the maintainers of com.google.appengine.tools.development.StreamHandlerFactory
-WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-WARNING: All illegal access operations will be denied in a future release
-May 14, 2018 11:37:25 AM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+May 14, 2018 1:51:46 PM java.util.prefs.WindowsPreferences <init>
+WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
+May 14, 2018 1:51:46 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\roiat\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Users\roiat\Desktop\ThatJoke\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-2018-05-14 11:37:25.523:INFO::main: Logging initialized @527ms
-May 14, 2018 8:37:25 AM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
-WARNING: Your working directory, (C:\Users\roiat\Desktop\ThatJoke) is not equal to your 
+2018-05-14 13:51:46.596:INFO::main: Logging initialized @363ms
+May 14, 2018 10:51:46 AM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+WARNING: Your working directory, (C:\Users\roiat\Desktop\ThatJoke\backend) is not equal to your 
 web application root (C:\Users\roiat\Desktop\ThatJoke\backend\build\exploded-backend)
 You will not be able to access files from your working directory on the production server.
 
-2018-05-14 11:37:25.790:INFO:oejs.Server:main: jetty-9.3.18.v20170406
-2018-05-14 11:37:27.985:INFO:oeja.AnnotationConfiguration:main: Scanning elapsed time=1834ms
-2018-05-14 11:37:28.437:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@4d411036{/,file:///C:/Users/roiat/Desktop/ThatJoke/backend/build/exploded-backend/,AVAILABLE}{C:\Users\roiat\Desktop\ThatJoke\backend\build\exploded-backend}
-2018-05-14 11:37:28.456:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@2555fff0{HTTP/1.1,[http/1.1]}{localhost:8080}
-2018-05-14 11:37:28.456:INFO:oejs.Server:main: Started @3461ms
-May 14, 2018 8:37:28 AM com.google.appengine.tools.development.AbstractModule startup
+2018-05-14 13:51:46.896:INFO:oejs.Server:main: jetty-9.3.18.v20170406
+2018-05-14 13:51:49.203:INFO:oeja.AnnotationConfiguration:main: Scanning elapsed time=1891ms
+2018-05-14 13:51:49.432:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@2ad48653{/,file:///C:/Users/roiat/Desktop/ThatJoke/backend/build/exploded-backend/,AVAILABLE}{C:\Users\roiat\Desktop\ThatJoke\backend\build\exploded-backend}
+2018-05-14 13:51:49.445:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@4149c063{HTTP/1.1,[http/1.1]}{localhost:8080}
+2018-05-14 13:51:49.445:INFO:oejs.Server:main: Started @3213ms
+May 14, 2018 10:51:49 AM com.google.appengine.tools.development.AbstractModule startup
 INFO: Module instance default is running at http://localhost:8080/
-May 14, 2018 8:37:28 AM com.google.appengine.tools.development.AbstractModule startup
+May 14, 2018 10:51:49 AM com.google.appengine.tools.development.AbstractModule startup
 INFO: The admin console is running at http://localhost:8080/_ah/admin
-May 14, 2018 11:37:28 AM com.google.appengine.tools.development.DevAppServerImpl doStart
+May 14, 2018 1:51:49 PM com.google.appengine.tools.development.DevAppServerImpl doStart
 INFO: Dev App Server is now running
-2018-05-14 11:37:29.564:INFO:oejs.AbstractConnector:pool-1-thread-1: Stopped NetworkTrafficSelectChannelConnector@2555fff0{HTTP/1.1,[http/1.1]}{localhost:8080}
-2018-05-14 11:37:29.571:INFO:oejsh.ContextHandler:pool-1-thread-1: Stopped c.g.a.t.d.j.DevAppEngineWebAppContext@4d411036{/,file:///C:/Users/roiat/Desktop/ThatJoke/backend/build/exploded-backend/,UNAVAILABLE}{C:\Users\roiat\Desktop\ThatJoke\backend\build\exploded-backend}
-May 14, 2018 11:37:29 AM com.google.appengine.tools.development.AbstractModule shutdown
-INFO: Shutting down module instance default
-Shutting down.

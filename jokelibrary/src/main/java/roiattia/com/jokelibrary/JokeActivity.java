@@ -12,8 +12,6 @@ public class JokeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joke);
 
-        getSupportActionBar().setTitle("JokeActivity");
-
         Intent intent = getIntent();
         String joke = intent.getStringExtra("joke");
 

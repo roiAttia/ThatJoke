@@ -29,6 +29,7 @@ public class MainFragment extends Fragment
 
         mLoadingLayout = rootview.findViewById(R.id.layout_loading);
 
+        // set the Hit me! button on click event
         Button button = rootview.findViewById(R.id.btn_joke);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +42,10 @@ public class MainFragment extends Fragment
 
     }
 
+    /**
+     * This method open the joke activity
+     *@param joke the joke retrieved from the java library
+    **/
     public void startJokeActivity(String joke){
         Intent intent = new Intent(getContext(), JokeActivity.class);
         intent.putExtra("joke", joke);
@@ -55,6 +60,9 @@ public class MainFragment extends Fragment
     @Override
     public void postJoke(String joke) { }
 
+    /**
+     * This method hides the progress bar
+     **/
     public void hideLoading(){
         mLoadingLayout.setVisibility(View.INVISIBLE);
     }

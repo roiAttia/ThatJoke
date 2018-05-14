@@ -14,7 +14,9 @@ public class MainActivityFragment extends MainFragment{
 
     @Override
     public void postJoke(String joke) {
+        // hide progress bar
         hideLoading();
+        // open joke activity
         startJokeActivity(joke);
     }
 }

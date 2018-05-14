@@ -32,6 +32,9 @@ public class MainActivityFragment extends MainFragment{
         initializeAd();
     }
 
+    /*
+    * This method initialize the Interstitial Ad
+    */
     private void initializeAd() {
         MobileAds.initialize(getContext(), "ca-app-pub-3940256099942544~3347511713");
 
@@ -43,6 +46,7 @@ public class MainActivityFragment extends MainFragment{
             public void onAdClosed() {
                 // Load the next interstitial.
                 mInterstitialAd.loadAd(new AdRequest.Builder().build());
+                //open joke activity
                 startJokeActivity(mJoke);
             }
         });
