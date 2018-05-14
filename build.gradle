@@ -24,6 +24,10 @@ allprojects {
     }
 }
 
+task bindingAll{
+    dependsOn(":backend:appengineStart", ":app:connectedCheck", ":backend:appengineStop")
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

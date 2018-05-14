@@ -27,7 +27,9 @@ public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPreExecute() {
-        mEndpointCallback.preJoke();
+        if(mEndpointCallback != null) {
+            mEndpointCallback.preJoke();
+        }
     }
 
     @Override
