@@ -2,5 +2,5 @@
     <string name="app_name">ThatJoke</string>
     <string name="welcome_message">Welcome to ThatJoke, click HIT ME! to get a joke :)</string>
     <string name="joke_button">hit me!</string>
-    <string name="loading">Loading...</string>
+    <string name="loading">Loading…</string>
 </resources>

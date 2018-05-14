@@ -5,17 +5,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-
 
 import roiattia.com.jokelibrary.JokeActivity;
-import roiattia.com.joker.Joker;
 
 public class MainFragment extends Fragment
         implements EndpointsAsyncTask.EndpointCallback{
@@ -46,7 +42,7 @@ public class MainFragment extends Fragment
      * This method open the joke activity
      *@param joke the joke retrieved from the java library
     **/
-    public void startJokeActivity(String joke){
+    void startJokeActivity(String joke){
         Intent intent = new Intent(getContext(), JokeActivity.class);
         intent.putExtra("joke", joke);
         startActivity(intent);
@@ -63,7 +59,7 @@ public class MainFragment extends Fragment
     /**
      * This method hides the progress bar
      **/
-    public void hideLoading(){
+    void hideLoading(){
         mLoadingLayout.setVisibility(View.INVISIBLE);
     }
 }
